@@ -1,0 +1,20 @@
+<%= form_for @booking do |f| %>
+    <%= hidden_field_tag 'property_id', @property.id %>
+    <% unless user_signed_in? %>
+    <div>
+      <%= label_tag "email" %>
+      <%= text_field_tag 'email' %>
+    </div>
+    <% end %>
+    <div>
+      <%= f.label :start_date %>
+      <%= f.date_select :start_date %>
+    </div>
+    <div>
+      <%= f.label :end_date %>
+      <%= f.date_select :end_date %>
+    </div>
+    <div>
+      <%= f.submit "Submit" %>
+    </div>
+<% end %>

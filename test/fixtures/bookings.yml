@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_date: 2014-10-03
+  end_date: 2014-10-03
+  user_id: 1
+  property_id: 1
+  confirmed: false
+
+two:
+  start_date: 2014-10-03
+  end_date: 2014-10-03
+  user_id: 1
+  property_id: 1
+  confirmed: false

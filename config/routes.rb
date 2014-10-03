@@ -1,7 +1,19 @@
 Rails.application.routes.draw do
-  root 'users#index'
-  resources :users
+
+  get 'bookings/index'
+
+  get 'bookings/show'
+
   devise_for :users
+  # resources :users
+  resources :properties
+  resources :bookings
+  get 'properties/:id/book/' => 'properties#book', as: :new_property_book
+  post 'properties/:id/book/' => 'properties#book', as: :property_book
+  get 'bookings/create'
+  get 'bookings/update'
+  root 'properties#index'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

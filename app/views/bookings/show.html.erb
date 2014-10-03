@@ -1,2 +1,5 @@
-<h1>Bookings#show</h1>
-<p>Find me in app/views/bookings/show.html.erb</p>
+
+<%= form_for @booking do |f| %>
+    <%= @booking.property.name %>
+    <%= @booking.start_date %>
+<% end %>

@@ -7,7 +7,7 @@ class UserMailer < ActionMailer::Base
     @booking = booking
     @user = booking.user
     @property = booking.property
-    @url = root_path
+    @url = booking_url(@booking)
     mail(to: booking.user.email, subject: "[Time Share Scheduled] Confirm you booking")
   end
 

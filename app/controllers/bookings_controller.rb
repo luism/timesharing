@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  before_filter :set_booking, only: :show
   def index
   end
 
@@ -28,9 +29,13 @@ class BookingsController < ApplicationController
     end
   end
 
+  def confirm
+
+  end
+
   private
     def set_booking
-      @booking = Property.find(params[:id])
+      @booking = Booking.find(params[:id])
     end
 
     def booking_params
